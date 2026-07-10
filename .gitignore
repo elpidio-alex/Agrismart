@@ -1,0 +1,24 @@
+# Variables d'environnement — NE JAMAIS committer
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Vercel
+.vercel/
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Editeurs
+.vscode/
+.idea/
+*.swp

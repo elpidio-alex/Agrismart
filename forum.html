@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Forum - AgriSmart</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="topnav" aria-label="Navigation principale">
+    <a href="index.html" class="topnav-brand"><img src="assets/images/logo.png" alt="AgriSmart" class="brand-logo">AgriSmart</a>
+    <div class="topnav-links">
+        <a href="index.html" id="navHome">Home</a>
+        <a href="weather.html" id="navWeather">Weather</a>
+        <a href="crop.html" id="navCrops">Crops</a>
+        <a href="prices.html" id="navPrices">Prices</a>
+        <a href="disease.html" id="navDisease">Disease</a>
+        <a href="calculator.html" id="navCalculator">Calculator</a>
+        <a href="forum.html" id="navForum">Forum</a>
+        <a href="about.html" id="navAbout">About</a>
+        <a href="contact.html" id="navContact">Contact</a>
+    </div>
+    <div class="topnav-actions">
+        <div class="lang-switcher-modern" role="group" aria-label="Sélecteur de langue">
+            <button class="lang-flag-btn" id="langToggleBtn" onclick="toggleLanguage()" aria-label="Changer de langue">
+                <span id="langFlagIcon">🇬🇧</span>
+                <span id="langFlagCode">EN</span>
+            </button>
+        </div>
+        <a href="login.html" class="nav-btn nav-btn-ghost" id="navLoginLink">Se connecter</a>
+        <a href="login.html?mode=register" class="nav-btn nav-btn-solid" id="navSignupLink">Créer un compte</a>
+    </div>
+</nav>
+
+<header class="forum-header">
+    <h1 id="forumTitle">🌾 Farmer Community Forum</h1>
+    <p id="forumSubtitle">Share tips, ask questions, and help other farmers</p>
+</header>
+
+<div class="forum-container">
+    <div class="post-box">
+        <h2 id="createPostTitle">📝 Create a Post</h2>
+
+        <label for="username" class="sr-only">Your name</label>
+        <input type="text" id="username" placeholder="Your name">
+
+        <label for="message" class="sr-only">Your message</label>
+        <textarea id="message" rows="3" placeholder="Write your message..."></textarea>
+
+        <button id="postBtn" onclick="addPost()">Post</button>
+    </div>
+
+    <div class="posts" id="posts" role="feed" aria-label="Forum posts / Publications du forum">
+        <div class="post">
+            <h3 id="postUser1">Amis Farmer</h3>
+            <p id="postText1">Which crop is best for the rainy season in Togo?</p>
+        </div>
+
+        <div class="post">
+            <h3 id="postUser2">AgriExpert</h3>
+            <p id="postText2">Maize and cassava are very productive in this period.</p>
+        </div>
+    </div>
+</div>
+
+<div class="back-container">
+    <a href="index.html" class="back-btn" id="backHome">⬅ Back Home</a>
+</div>
+
+<footer class="footer footer-modern">
+    <div class="footer-container footer-container-modern">
+
+        <div class="footer-box footer-brand-box">
+            <h3><img src="assets/images/logo.png" alt="" class="footer-logo">AgriSmart</h3>
+            <p id="footerDescription">
+                Smart agriculture platform helping farmers in Togo make better decisions using technology.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3 id="quickLinks">Quick Links</h3>
+            <a href="index.html" id="homeLink">Home</a>
+            <a href="weather.html" id="weatherLink">Weather</a>
+            <a href="crop.html" id="cropsLink">Crops</a>
+            <a href="prices.html" id="pricesLink">Prices</a>
+            <a href="forum.html" id="forumLink">Forum</a>
+        </div>
+
+        <div class="footer-box">
+            <h3 id="contactHeading">Contact</h3>
+            <p class="footer-contact-line">📍 Lomé, Togo</p>
+            <a href="mailto:support@agrismart.com" class="footer-contact-line footer-contact-link">📧 support@agrismart.com</a>
+            <a href="tel:+22879560798" class="footer-contact-line footer-contact-link">📞 +228 79 56 07 98</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p id="footerBottomText">
+            © 2026 AgriSmart. All rights reserved.
+        </p>
+    </div>
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
