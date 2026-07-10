@@ -369,17 +369,20 @@ function setLanguage(l) {
     localStorage.setItem("lang", lang);
     document.documentElement.setAttribute("lang", lang);
 
-    const flagIcon = document.getElementById("langFlagIcon");
+    const flagGB = document.getElementById("langFlagIconGB");
+    const flagFR = document.getElementById("langFlagIconFR");
     const flagCode = document.getElementById("langFlagCode");
     const toggleBtn = document.getElementById("langToggleBtn");
-    if (flagIcon && flagCode) {
+    if (flagGB && flagFR && flagCode) {
         // Affiche le drapeau de la langue VERS LAQUELLE on peut basculer
         if (lang === "fr") {
-            flagIcon.textContent = "🇬🇧";
+            flagGB.style.display = "inline-flex";
+            flagFR.style.display = "none";
             flagCode.textContent = "EN";
             if (toggleBtn) toggleBtn.setAttribute("aria-label", "Switch to English");
         } else {
-            flagIcon.textContent = "🇫🇷";
+            flagGB.style.display = "none";
+            flagFR.style.display = "inline-flex";
             flagCode.textContent = "FR";
             if (toggleBtn) toggleBtn.setAttribute("aria-label", "Passer en français");
         }
