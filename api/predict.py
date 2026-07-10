@@ -1,10 +1,36 @@
 """POST /predict — détection heuristique de maladie sur feuille (même logique que app.py)."""
 
 import json
-import cgi
 import io
 from http.server import BaseHTTPRequestHandler
 from PIL import Image
+
+
+def _extract_file_from_multipart(body: bytes, content_type: str):
+    """Parse minimal d'un multipart/form-data pour extraire le premier
+    fichier envoyé (champ 'file'), sans dépendre du module `cgi`
+    (supprimé en Python 3.13)."""
+    if "boundary=" not in content_type:
+        return None
+    boundary = content_type.split("boundary=")[-1].strip().strip('"')
+    delimiter = ("--" + boundary).encode()
+
+    parts = body.split(delimiter)
+    for part in parts:
+        part = part.strip(b"\r\n")
+        if not part or part == b"--":
+            continue
+        if b"\r\n\r\n" not in part:
+            continue
+        headers_blob, _, content = part.partition(b"\r\n\r\n")
+        headers_text = headers_blob.decode(errors="ignore")
+        if 'name="file"' not in headers_text:
+            continue
+        # Retire le \r\n final ajouté avant le prochain boundary
+        if content.endswith(b"\r\n"):
+            content = content[:-2]
+        return content
+    return None
 
 DISEASE_PROFILES = [
     {"name": "Healthy", "name_fr": "Sain", "min_green_ratio": 0.55},
@@ -52,22 +78,20 @@ def _analyze_leaf_image(image):
 class handler(BaseHTTPRequestHandler):
     def do_POST(self):
         try:
-            ctype, pdict = cgi.parse_header(self.headers.get("Content-Type", ""))
-            if ctype != "multipart/form-data":
+            content_type = self.headers.get("Content-Type", "")
+            if "multipart/form-data" not in content_type:
                 self._send_json(400, {"error": "Expected multipart/form-data"})
                 return
 
-            pdict["boundary"] = pdict["boundary"].encode()
             length = int(self.headers.get("Content-Length", 0))
-            pdict["CONTENT-LENGTH"] = length
-            fields = cgi.parse_multipart(self.rfile, pdict)
+            body = self.rfile.read(length) if length else b""
 
-            file_bytes = fields.get("file")
+            file_bytes = _extract_file_from_multipart(body, content_type)
             if not file_bytes:
                 self._send_json(400, {"error": "No file part in the request"})
                 return
 
-            image = Image.open(io.BytesIO(file_bytes[0]))
+            image = Image.open(io.BytesIO(file_bytes))
             result = _analyze_leaf_image(image)
             self._send_json(200, result)
         except Exception as e:
