@@ -106,6 +106,69 @@ img { max-width: 100%; display: block; }
   background: var(--mint-pale);
 }
 
+/* Language dropdown (3 languages: EN / FR / Éwé) */
+.lang-switcher-modern {
+  position: relative;
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 6px;
+  min-width: 168px;
+  z-index: 200;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-menu.open { display: flex; }
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.lang-option:hover {
+  background: var(--mint-pale);
+}
+
+.lang-option.active {
+  background: var(--mint-pale);
+  color: var(--forest-dark);
+}
+
+.lang-option .flag-icon {
+  flex: 0 0 auto;
+}
+
+.lang-option .lang-check {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--forest-dark);
+  visibility: hidden;
+}
+
+.lang-option.active .lang-check {
+  visibility: visible;
+}
+
 .nav-btn {
   font-size: 13px;
   font-weight: 700;

@@ -26,15 +26,55 @@
         <a href="login.html" class="nav-btn nav-btn-ghost" id="navLoginLink">Se connecter</a>
         <a href="login.html?mode=register" class="nav-btn nav-btn-solid" id="navSignupLink">Créer un compte</a>
         <div class="lang-switcher-modern" role="group" aria-label="Sélecteur de langue">
-            <button class="lang-flag-btn" id="langToggleBtn" onclick="toggleLanguage()" aria-label="Changer de langue">
+            <button class="lang-flag-btn" id="langToggleBtn" onclick="toggleLangMenu()" aria-haspopup="true" aria-expanded="false" aria-label="Changer de langue">
                 <span class="flag-icon" id="langFlagIconGB">
                     <svg viewBox="0 0 60 30" width="20" height="14"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="2"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
                 </span>
                 <span class="flag-icon" id="langFlagIconFR" style="display:none;">
                     <svg viewBox="0 0 60 30" width="20" height="14"><rect width="20" height="30" fill="#0055A4"/><rect x="20" width="20" height="30" fill="#fff"/><rect x="40" width="20" height="30" fill="#EF4135"/></svg>
                 </span>
+                <span class="flag-icon" id="langFlagIconTG" style="display:none;">
+                    <svg viewBox="0 0 60 30" width="20" height="14">
+                        <rect width="60" height="30" fill="#FFCE00"/>
+                        <rect width="60" height="6" y="0" fill="#006A4E"/>
+                        <rect width="60" height="6" y="12" fill="#006A4E"/>
+                        <rect width="60" height="6" y="24" fill="#006A4E"/>
+                        <rect width="24" height="18" fill="#D21034"/>
+                        <path d="M12,4.5 L13.8,9.3 L19,9.3 L14.8,12.3 L16.4,17.1 L12,14.1 L7.6,17.1 L9.2,12.3 L5,9.3 L10.2,9.3 Z" fill="#fff"/>
+                    </svg>
+                </span>
                 <span id="langFlagCode">EN</span>
             </button>
+            <div class="lang-menu" id="langMenu" role="menu">
+                <button type="button" class="lang-option" id="langOptionEN" onclick="setLanguage('en')" role="menuitem">
+                    <span class="flag-icon">
+                        <svg viewBox="0 0 60 30" width="18" height="12"><clipPath id="s2"><path d="M0,0 v30 h60 v-30 z"/></clipPath><g clip-path="url(#s2)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="2"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+                    </span>
+                    <span>English</span>
+                    <span class="lang-check">✓</span>
+                </button>
+                <button type="button" class="lang-option" id="langOptionFR" onclick="setLanguage('fr')" role="menuitem">
+                    <span class="flag-icon">
+                        <svg viewBox="0 0 60 30" width="18" height="12"><rect width="20" height="30" fill="#0055A4"/><rect x="20" width="20" height="30" fill="#fff"/><rect x="40" width="20" height="30" fill="#EF4135"/></svg>
+                    </span>
+                    <span>Français</span>
+                    <span class="lang-check">✓</span>
+                </button>
+                <button type="button" class="lang-option" id="langOptionEWE" onclick="setLanguage('ewe')" role="menuitem">
+                    <span class="flag-icon">
+                        <svg viewBox="0 0 60 30" width="18" height="12">
+                            <rect width="60" height="30" fill="#FFCE00"/>
+                            <rect width="60" height="6" y="0" fill="#006A4E"/>
+                            <rect width="60" height="6" y="12" fill="#006A4E"/>
+                            <rect width="60" height="6" y="24" fill="#006A4E"/>
+                            <rect width="24" height="18" fill="#D21034"/>
+                            <path d="M12,4.5 L13.8,9.3 L19,9.3 L14.8,12.3 L16.4,17.1 L12,14.1 L7.6,17.1 L9.2,12.3 L5,9.3 L10.2,9.3 Z" fill="#fff"/>
+                        </svg>
+                    </span>
+                    <span>Éwé</span>
+                    <span class="lang-check">✓</span>
+                </button>
+            </div>
         </div>
     </div>
 </nav>

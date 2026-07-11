@@ -265,15 +265,55 @@
     </div>
     <div class="topnav-actions">
         <div class="lang-switcher-modern" role="group" aria-label="Sélecteur de langue">
-            <button class="lang-flag-btn" id="langToggleBtn" onclick="toggleLanguage()" aria-label="Changer de langue">
+            <button class="lang-flag-btn" id="langToggleBtn" onclick="toggleLangMenu()" aria-haspopup="true" aria-expanded="false" aria-label="Changer de langue">
                 <span class="flag-icon" id="langFlagIconGB">
                     <svg viewBox="0 0 60 30" width="20" height="14"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="2"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
                 </span>
                 <span class="flag-icon" id="langFlagIconFR" style="display:none;">
                     <svg viewBox="0 0 60 30" width="20" height="14"><rect width="20" height="30" fill="#0055A4"/><rect x="20" width="20" height="30" fill="#fff"/><rect x="40" width="20" height="30" fill="#EF4135"/></svg>
                 </span>
+                <span class="flag-icon" id="langFlagIconTG" style="display:none;">
+                    <svg viewBox="0 0 60 30" width="20" height="14">
+                        <rect width="60" height="30" fill="#FFCE00"/>
+                        <rect width="60" height="6" y="0" fill="#006A4E"/>
+                        <rect width="60" height="6" y="12" fill="#006A4E"/>
+                        <rect width="60" height="6" y="24" fill="#006A4E"/>
+                        <rect width="24" height="18" fill="#D21034"/>
+                        <path d="M12,4.5 L13.8,9.3 L19,9.3 L14.8,12.3 L16.4,17.1 L12,14.1 L7.6,17.1 L9.2,12.3 L5,9.3 L10.2,9.3 Z" fill="#fff"/>
+                    </svg>
+                </span>
                 <span id="langFlagCode">EN</span>
             </button>
+            <div class="lang-menu" id="langMenu" role="menu">
+                <button type="button" class="lang-option" id="langOptionEN" onclick="setLanguage('en')" role="menuitem">
+                    <span class="flag-icon">
+                        <svg viewBox="0 0 60 30" width="18" height="12"><clipPath id="s2"><path d="M0,0 v30 h60 v-30 z"/></clipPath><g clip-path="url(#s2)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="2"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+                    </span>
+                    <span>English</span>
+                    <span class="lang-check">✓</span>
+                </button>
+                <button type="button" class="lang-option" id="langOptionFR" onclick="setLanguage('fr')" role="menuitem">
+                    <span class="flag-icon">
+                        <svg viewBox="0 0 60 30" width="18" height="12"><rect width="20" height="30" fill="#0055A4"/><rect x="20" width="20" height="30" fill="#fff"/><rect x="40" width="20" height="30" fill="#EF4135"/></svg>
+                    </span>
+                    <span>Français</span>
+                    <span class="lang-check">✓</span>
+                </button>
+                <button type="button" class="lang-option" id="langOptionEWE" onclick="setLanguage('ewe')" role="menuitem">
+                    <span class="flag-icon">
+                        <svg viewBox="0 0 60 30" width="18" height="12">
+                            <rect width="60" height="30" fill="#FFCE00"/>
+                            <rect width="60" height="6" y="0" fill="#006A4E"/>
+                            <rect width="60" height="6" y="12" fill="#006A4E"/>
+                            <rect width="60" height="6" y="24" fill="#006A4E"/>
+                            <rect width="24" height="18" fill="#D21034"/>
+                            <path d="M12,4.5 L13.8,9.3 L19,9.3 L14.8,12.3 L16.4,17.1 L12,14.1 L7.6,17.1 L9.2,12.3 L5,9.3 L10.2,9.3 Z" fill="#fff"/>
+                        </svg>
+                    </span>
+                    <span>Éwé</span>
+                    <span class="lang-check">✓</span>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
@@ -287,18 +327,18 @@
         <p class="auth-subtitle" id="authSubtitle">Connectez-vous pour accéder à votre espace agriculteur</p>
 
         <div class="auth-tabs" role="tablist" aria-label="Choix connexion ou inscription">
-            <button class="auth-tab active" id="tabLogin" role="tab" aria-selected="true" onclick="switchTab('login')">Se connecter</button>
-            <button class="auth-tab" id="tabRegister" role="tab" aria-selected="false" onclick="switchTab('register')">Créer un compte</button>
+            <button class="auth-tab active" id="tabLogin" role="tab" aria-selected="true" onclick="switchTab('login')"><span id="tabLoginText">Se connecter</span></button>
+            <button class="auth-tab" id="tabRegister" role="tab" aria-selected="false" onclick="switchTab('register')"><span id="tabRegisterText">Créer un compte</span></button>
         </div>
 
         <!-- ===================== FORMULAIRE CONNEXION ===================== -->
         <form id="loginForm" class="auth-form active" novalidate>
             <div class="auth-field">
-                <label for="loginEmail">Adresse email</label>
+                <label for="loginEmail" id="loginEmailLabel">Adresse email</label>
                 <input type="email" id="loginEmail" name="email" placeholder="vous@exemple.com" required autocomplete="email">
             </div>
             <div class="auth-field">
-                <label for="loginPassword">Mot de passe</label>
+                <label for="loginPassword" id="loginPasswordLabel">Mot de passe</label>
                 <div class="auth-password-wrap">
                     <input type="password" id="loginPassword" name="password" placeholder="••••••••" required autocomplete="current-password">
                     <button type="button" class="auth-eye-btn" data-target="loginPassword" onclick="togglePasswordVisibility(this)" aria-label="Afficher le mot de passe">👁️</button>
@@ -312,44 +352,44 @@
         <form id="registerForm" class="auth-form" novalidate>
             <div class="auth-row">
                 <div class="auth-field">
-                    <label for="firstName">Prénom</label>
+                    <label for="firstName" id="firstNameLabel">Prénom</label>
                     <input type="text" id="firstName" name="first_name" placeholder="Ama" required autocomplete="given-name">
                 </div>
                 <div class="auth-field">
-                    <label for="lastName">Nom</label>
+                    <label for="lastName" id="lastNameLabel">Nom</label>
                     <input type="text" id="lastName" name="last_name" placeholder="Koffi" required autocomplete="family-name">
                 </div>
             </div>
             <div class="auth-field">
-                <label for="registerEmail">Adresse email</label>
+                <label for="registerEmail" id="registerEmailLabel">Adresse email</label>
                 <input type="email" id="registerEmail" name="email" placeholder="vous@exemple.com" required autocomplete="email">
             </div>
             <div class="auth-row">
                 <div class="auth-field">
-                    <label for="phone">Numéro de téléphone</label>
+                    <label for="phone" id="phoneLabel">Numéro de téléphone</label>
                     <input type="tel" id="phone" name="phone" placeholder="+228 90 00 00 00" required autocomplete="tel">
                 </div>
                 <div class="auth-field">
-                    <label for="birthDate">Date de naissance</label>
+                    <label for="birthDate" id="birthDateLabel">Date de naissance</label>
                     <input type="date" id="birthDate" name="birth_date" required autocomplete="bday">
                 </div>
             </div>
             <div class="auth-field">
-                <label for="registerPassword">Mot de passe</label>
+                <label for="registerPassword" id="registerPasswordLabel">Mot de passe</label>
                 <div class="auth-password-wrap">
                     <input type="password" id="registerPassword" name="password" placeholder="••••••••" required autocomplete="new-password">
                     <button type="button" class="auth-eye-btn" data-target="registerPassword" onclick="togglePasswordVisibility(this)" aria-label="Afficher le mot de passe">👁️</button>
                 </div>
                 <ul class="password-rules" id="passwordRules">
-                    <li id="ruleLength">8 caractères min.</li>
-                    <li id="ruleUpper">1 majuscule</li>
-                    <li id="ruleLower">1 minuscule</li>
-                    <li id="ruleNumber">1 chiffre</li>
-                    <li id="ruleSpecial">1 caractère spécial</li>
+                    <li id="ruleLength"><span id="ruleLengthText">8 caractères min.</span></li>
+                    <li id="ruleUpper"><span id="ruleUpperText">1 majuscule</span></li>
+                    <li id="ruleLower"><span id="ruleLowerText">1 minuscule</span></li>
+                    <li id="ruleNumber"><span id="ruleNumberText">1 chiffre</span></li>
+                    <li id="ruleSpecial"><span id="ruleSpecialText">1 caractère spécial</span></li>
                 </ul>
             </div>
             <div class="auth-field">
-                <label for="confirmPassword">Confirmer le mot de passe</label>
+                <label for="confirmPassword" id="confirmPasswordLabel">Confirmer le mot de passe</label>
                 <div class="auth-password-wrap">
                     <input type="password" id="confirmPassword" name="confirm_password" placeholder="••••••••" required autocomplete="new-password">
                     <button type="button" class="auth-eye-btn" data-target="confirmPassword" onclick="togglePasswordVisibility(this)" aria-label="Afficher le mot de passe">👁️</button>
@@ -359,14 +399,14 @@
 
             <div class="auth-terms">
                 <input type="checkbox" id="termsAccepted" name="terms_accepted" required>
-                <label for="termsAccepted">J'accepte les <a href="#" onclick="return false;">conditions d'utilisation</a> et la <a href="#" onclick="return false;">politique de confidentialité</a> d'AgriSmart.</label>
+                <label for="termsAccepted" id="termsLabel">J'accepte les <a href="#" onclick="return false;" id="termsLink">conditions d'utilisation</a> et la <a href="#" onclick="return false;" id="privacyLink">politique de confidentialité</a> d'AgriSmart.</label>
             </div>
 
             <button type="submit" class="auth-submit" id="registerSubmitBtn">Créer mon compte</button>
             <p class="auth-message" id="registerMessage" role="status" aria-live="polite"></p>
         </form>
 
-        <div class="auth-divider">OU</div>
+        <div class="auth-divider" id="authDivider">OU</div>
 
         <!-- Bouton Google : PLACEHOLDER VISUEL UNIQUEMENT.
              Aucun vrai flux OAuth Google n'est branché ici (nécessiterait un
@@ -378,16 +418,76 @@
                 <path fill="#FBBC05" d="M3.97 10.71c-.18-.54-.28-1.11-.28-1.71s.1-1.17.28-1.71V4.95H.96A8.996 8.996 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.34z"/>
                 <path fill="#EA4335" d="M9 3.58c1.32 0 2.51.45 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.95l3.01 2.34C4.68 5.16 6.66 3.58 9 3.58z"/>
             </svg>
-            Continuer avec Google
+            <span id="googleBtnText">Continuer avec Google</span>
         </button>
 
-        <p class="auth-footer-note">En vous connectant, vous acceptez nos conditions d'utilisation.</p>
+        <p class="auth-footer-note" id="authFooterNote">En vous connectant, vous acceptez nos conditions d'utilisation.</p>
     </div>
 </div>
 
 <script src="assets/js/script.js"></script>
 <script>
 let mode = "login"; // "login" ou "register"
+
+// Petits messages dynamiques propres à la page login/register, en 3 langues.
+const authText = {
+    en: {
+        checking: "One moment...",
+        loginError: "Something went wrong.",
+        loginSuccess: "Login successful! Redirecting...",
+        loginNetworkError: "Couldn't reach the server. Please try again.",
+        passwordsMatch: "Passwords match ✓",
+        passwordsNoMatch: "Passwords don't match",
+        passwordInvalid: "The password doesn't meet all the criteria above.",
+        passwordsMismatch2: "Passwords don't match.",
+        termsRequired: "You must accept the terms of use.",
+        registerError: "Something went wrong.",
+        registerSuccess: "Account created successfully! You can now log in.",
+        registerNetworkError: "Couldn't reach the server. Please try again.",
+        googleSoon: "Google sign-in is coming soon!",
+        showPassword: "Show password",
+        hidePassword: "Hide password"
+    },
+    fr: {
+        checking: "Un instant...",
+        loginError: "Une erreur est survenue.",
+        loginSuccess: "Connexion réussie ! Redirection...",
+        loginNetworkError: "Impossible de contacter le serveur. Réessayez.",
+        passwordsMatch: "Les mots de passe correspondent ✓",
+        passwordsNoMatch: "Les mots de passe ne correspondent pas",
+        passwordInvalid: "Le mot de passe ne respecte pas tous les critères ci-dessus.",
+        passwordsMismatch2: "Les mots de passe ne correspondent pas.",
+        termsRequired: "Vous devez accepter les conditions d'utilisation.",
+        registerError: "Une erreur est survenue.",
+        registerSuccess: "Compte créé avec succès ! Vous pouvez vous connecter.",
+        registerNetworkError: "Impossible de contacter le serveur. Réessayez.",
+        googleSoon: "La connexion Google arrive bientôt !",
+        showPassword: "Afficher le mot de passe",
+        hidePassword: "Masquer le mot de passe"
+    },
+    ewe: {
+        checking: "Ɣeyiɣi kpuikpui aɖe...",
+        loginError: "Vodada aɖe dzɔ.",
+        loginSuccess: "Ège ɖe eme nyuie! Wole nu trɔm...",
+        loginNetworkError: "Mele ŋutete me be woaka asi server la ŋu o. Gadze edzi.",
+        passwordsMatch: "Password-wo sɔ ✓",
+        passwordsNoMatch: "Password-wo mesɔ o",
+        passwordInvalid: "Password la mewɔ ɖe se siwo katã le tame la dzi o.",
+        passwordsMismatch2: "Password-wo mesɔ o.",
+        termsRequired: "Ele be nàlɔ̃ ɖe zãzãɖoɖowo dzi.",
+        registerError: "Vodada aɖe dzɔ.",
+        registerSuccess: "Wowɔ akɔnta la nyuie! Àte ŋu age ɖe eme fifia.",
+        registerNetworkError: "Mele ŋutete me be woaka asi server la ŋu o. Gadze edzi.",
+        googleSoon: "Google dzi gege ava kpuie!",
+        showPassword: "Fia password",
+        hidePassword: "Ɣla password"
+    }
+};
+
+function at(key) {
+    const l = (typeof lang !== "undefined" && authText[lang]) ? lang : "fr";
+    return authText[l][key];
+}
 
 function switchTab(newMode) {
     mode = newMode;
@@ -398,9 +498,17 @@ function switchTab(newMode) {
     document.getElementById("tabRegister").setAttribute("aria-selected", !isLogin);
     document.getElementById("loginForm").classList.toggle("active", isLogin);
     document.getElementById("registerForm").classList.toggle("active", !isLogin);
-    document.getElementById("authSubtitle").textContent = isLogin
-        ? "Connectez-vous pour accéder à votre espace agriculteur"
-        : "Créez votre compte AgriSmart en quelques secondes";
+    updateAuthSubtitle();
+}
+
+function updateAuthSubtitle() {
+    const isLogin = mode === "login";
+    const t = (typeof text !== "undefined" && typeof lang !== "undefined") ? text[lang] : null;
+    const subtitleEl = document.getElementById("authSubtitle");
+    if (!subtitleEl) return;
+    if (t) {
+        subtitleEl.textContent = isLogin ? t.authSubtitleLogin : t.authSubtitleRegister;
+    }
 }
 
 // Permet d'arriver directement sur l'onglet inscription via ?mode=register
@@ -415,7 +523,7 @@ function togglePasswordVisibility(btn) {
     const isHidden = input.type === "password";
     input.type = isHidden ? "text" : "password";
     btn.textContent = isHidden ? "🙈" : "👁️";
-    btn.setAttribute("aria-label", isHidden ? "Masquer le mot de passe" : "Afficher le mot de passe");
+    btn.setAttribute("aria-label", isHidden ? at("hidePassword") : at("showPassword"));
 }
 
 // ---- Validation du mot de passe en direct ----
@@ -451,11 +559,11 @@ function checkPasswordsMatch() {
         return true;
     }
     if (pwd === confirm) {
-        msg.textContent = "Les mots de passe correspondent ✓";
+        msg.textContent = at("passwordsMatch");
         msg.className = "auth-message success";
         return true;
     } else {
-        msg.textContent = "Les mots de passe ne correspondent pas";
+        msg.textContent = at("passwordsNoMatch");
         msg.className = "auth-message error";
         return false;
     }
@@ -475,7 +583,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     const submitBtn = document.getElementById("loginSubmitBtn");
 
     submitBtn.disabled = true;
-    setMessage("loginMessage", "Un instant...", "");
+    setMessage("loginMessage", at("checking"), "");
 
     try {
         const res = await fetch(`/api/auth?action=login`, {
@@ -486,14 +594,14 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
         const data = await res.json();
 
         if (!res.ok) {
-            setMessage("loginMessage", data.error || "Une erreur est survenue.", "error");
+            setMessage("loginMessage", data.error || at("loginError"), "error");
             return;
         }
 
-        setMessage("loginMessage", "Connexion réussie ! Redirection...", "success");
+        setMessage("loginMessage", at("loginSuccess"), "success");
         setTimeout(() => { window.location.href = "index.html"; }, 800);
     } catch (err) {
-        setMessage("loginMessage", "Impossible de contacter le serveur. Réessayez.", "error");
+        setMessage("loginMessage", at("loginNetworkError"), "error");
     } finally {
         submitBtn.disabled = false;
     }
@@ -514,20 +622,20 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
     const submitBtn = document.getElementById("registerSubmitBtn");
 
     if (!isPasswordValid(password)) {
-        setMessage("registerMessage", "Le mot de passe ne respecte pas tous les critères ci-dessus.", "error");
+        setMessage("registerMessage", at("passwordInvalid"), "error");
         return;
     }
     if (!checkPasswordsMatch()) {
-        setMessage("registerMessage", "Les mots de passe ne correspondent pas.", "error");
+        setMessage("registerMessage", at("passwordsMismatch2"), "error");
         return;
     }
     if (!terms_accepted) {
-        setMessage("registerMessage", "Vous devez accepter les conditions d'utilisation.", "error");
+        setMessage("registerMessage", at("termsRequired"), "error");
         return;
     }
 
     submitBtn.disabled = true;
-    setMessage("registerMessage", "Un instant...", "");
+    setMessage("registerMessage", at("checking"), "");
 
     try {
         const res = await fetch(`/api/auth?action=register`, {
@@ -538,14 +646,14 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
         const data = await res.json();
 
         if (!res.ok) {
-            setMessage("registerMessage", data.error || "Une erreur est survenue.", "error");
+            setMessage("registerMessage", data.error || at("registerError"), "error");
             return;
         }
 
-        setMessage("registerMessage", "Compte créé avec succès ! Vous pouvez vous connecter.", "success");
+        setMessage("registerMessage", at("registerSuccess"), "success");
         setTimeout(() => switchTab("login"), 1200);
     } catch (err) {
-        setMessage("registerMessage", "Impossible de contacter le serveur. Réessayez.", "error");
+        setMessage("registerMessage", at("registerNetworkError"), "error");
     } finally {
         submitBtn.disabled = false;
     }
@@ -554,7 +662,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
 function handleGoogleClick() {
     // PLACEHOLDER : pas de vrai OAuth Google branché pour l'instant.
     const msgId = mode === "login" ? "loginMessage" : "registerMessage";
-    setMessage(msgId, "La connexion Google arrive bientôt !", "");
+    setMessage(msgId, at("googleSoon"), "");
 }
 </script>
 

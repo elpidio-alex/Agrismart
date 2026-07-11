@@ -183,7 +183,37 @@ const text = {
         postUser2: "AgriExpert",
         postText2: "Maize and cassava are very productive in this period.",
 
-        postBtn: "Post"
+        postBtn: "Post",
+
+        // LOGIN / REGISTER PAGE
+        authSubtitleLogin: "Log in to access your farmer space",
+        authSubtitleRegister: "Create your AgriSmart account in seconds",
+        tabLoginText: "Log in",
+        tabRegisterText: "Create an account",
+        loginEmailLabel: "Email address",
+        loginPasswordLabel: "Password",
+        loginSubmitBtn: "Log in",
+        firstNameLabel: "First name",
+        lastNameLabel: "Last name",
+        registerEmailLabel: "Email address",
+        phoneLabel: "Phone number",
+        birthDateLabel: "Date of birth",
+        registerPasswordLabel: "Password",
+        ruleLengthText: "8 characters min.",
+        ruleUpperText: "1 uppercase letter",
+        ruleLowerText: "1 lowercase letter",
+        ruleNumberText: "1 number",
+        ruleSpecialText: "1 special character",
+        confirmPasswordLabel: "Confirm password",
+        termsLabelPrefix: "I accept AgriSmart's",
+        termsLink: "terms of use",
+        termsLinkMid: "and",
+        privacyLink: "privacy policy",
+        termsLabelSuffix: ".",
+        registerSubmitBtn: "Create my account",
+        authDivider: "OR",
+        googleBtnText: "Continue with Google",
+        authFooterNote: "By logging in, you agree to our terms of use."
     },
 
     fr: {
@@ -356,7 +386,236 @@ const text = {
         postUser2: "Expert Agricole",
         postText2: "Le maïs et le manioc sont très productifs pendant cette période.",
 
-        postBtn: "Publier"
+        postBtn: "Publier",
+
+        // PAGE CONNEXION / INSCRIPTION
+        authSubtitleLogin: "Connectez-vous pour accéder à votre espace agriculteur",
+        authSubtitleRegister: "Créez votre compte AgriSmart en quelques secondes",
+        tabLoginText: "Se connecter",
+        tabRegisterText: "Créer un compte",
+        loginEmailLabel: "Adresse email",
+        loginPasswordLabel: "Mot de passe",
+        loginSubmitBtn: "Se connecter",
+        firstNameLabel: "Prénom",
+        lastNameLabel: "Nom",
+        registerEmailLabel: "Adresse email",
+        phoneLabel: "Numéro de téléphone",
+        birthDateLabel: "Date de naissance",
+        registerPasswordLabel: "Mot de passe",
+        ruleLengthText: "8 caractères min.",
+        ruleUpperText: "1 majuscule",
+        ruleLowerText: "1 minuscule",
+        ruleNumberText: "1 chiffre",
+        ruleSpecialText: "1 caractère spécial",
+        confirmPasswordLabel: "Confirmer le mot de passe",
+        termsLabelPrefix: "J'accepte les",
+        termsLink: "conditions d'utilisation",
+        termsLinkMid: "et la",
+        privacyLink: "politique de confidentialité",
+        termsLabelSuffix: "d'AgriSmart.",
+        registerSubmitBtn: "Créer mon compte",
+        authDivider: "OU",
+        googleBtnText: "Continuer avec Google",
+        authFooterNote: "En vous connectant, vous acceptez nos conditions d'utilisation."
+    },
+
+    ewe: {
+        navHome: "Aƒeme",
+        navWeather: "Yaƒoƒo",
+        navCrops: "Nukuwo",
+        navPrices: "Ga home",
+        navDisease: "Dɔléle",
+        navCalculator: "Xexlẽmɔ̃",
+        navForum: "Habɔbɔ",
+        navAbout: "Míawo ŋu",
+        navContact: "Ka ɖe mía ŋu",
+        navLogin: "Ge ɖe eme",
+        navSignup: "Wɔ akɔnta",
+
+        title: "Woezɔ le AgriSmart 🌾",
+        subtitle: "Wò agbledzikpɔla nunyalaa",
+        weather: "Yaƒoƒo ŋkuɖoɖo",
+        crops: "Nukuwo ƒe mɔfiafia",
+        prices: "Asi le ƒodzikpɔƒe",
+        disease: "Dɔléle kpɔkpɔ",
+        about: "AgriSmart ŋuti",
+        contact: "Kpekpeɖeŋu",
+        calculator: "Agble xexlẽmɔ̃",
+        community: "Agbledelawo ƒe habɔbɔ",
+        footerDescription: "Agbledɔwɔwɔ ƒe platform nunyala si kpena ɖe agbledelawo le Togo ŋu be woawɔ nyametsotso nyuiwo to mɔ̃nuwɔnawo dzi.",
+        quickLinks: "Kudɔwɔnu kabakaba",
+        homeLink: "Aƒeme",
+        weatherLink: "Yaƒoƒo",
+        cropsLink: "Nukuwo",
+        pricesLink: "Ga home",
+        forumLink: "Habɔbɔ",
+        contactHeading: "Ka ɖe mía ŋu",
+        copyright: "© 2026 AgriSmart. Gome ɖeɖe ɖesiaɖe le eƒe asi me.",
+
+        weatherMain: "🌦️ Yaƒoƒo ŋkuɖoɖo",
+        selectDayText: "Tia ŋkeke 🌤️",
+        tempText: "Dzoxɔxɔ ado go afisia",
+        adviceTitle: "🌱 Agble ŋuti aɖaŋuɖoɖo",
+        adviceText: "Tia ŋkeke akpɔ aɖaŋuɖoɖo",
+        weatherSubtitle: "Ɖo wò agbledɔwo ɖo to yaƒoƒo ŋuti nyanya dzi",
+        forecastTitle: "📅 Ŋkeke etɔ̃ ƒe ŋkuɖoɖo",
+        day1: "Ŋkeke 1",
+        sunny: "Ɣenuɣi",
+        day2: "Ŋkeke 2",
+        rainy: "Tsidzadza",
+        day3: "Ŋkeke 3",
+        cloudy: "Lilikpo",
+
+        cropTitle: "🌾 Nukuwo ƒe mɔfiafia",
+        cropSubtitle: "Di nukuwo eye nàsrɔ̃ ale si nàdze wo nyuie le Togo",
+        searchPlaceholder: "Di nuku (bli, mɔlu, agbeli...)",
+
+        maizeName: "🌽 Bli",
+        maizeSeason: "Ɣeyiɣi: Tsidzadza ɣeyiɣi",
+        maizeAdvice: "Aɖaŋuɖoɖo: Zã amidzɔ le kwasiɖa eve megbe",
+
+        riceName: "🌾 Mɔlu",
+        riceSeason: "Ɣeyiɣi: Anyigba tsɔtsɔ",
+        riceAdvice: "Aɖaŋuɖoɖo: Ehiã tsi ɖaa",
+
+        cassavaName: "🥔 Agbeli",
+        cassavaSeason: "Ɣeyiɣi: Ƒe blibo la katã",
+        cassavaAdvice: "Aɖaŋuɖoɖo: Enɔ te ɖe ƒudzedze ŋu",
+
+        pricesTitle: "💰 Ga home le ƒodzikpɔƒe",
+        priceSubtitle: "Nuku ga home fifia le Togo 📊",
+        highlightBtn: "Fia ga home nyuitɔwo 📊",
+
+        groundnutName: "🥜 Azi",
+        priceLabel: "Ga home",
+        perKg: "kilogram ɖeka",
+
+        maizePriceRange: "CFA 250 - 300 kilogram ɖeka",
+        ricePriceRange: "CFA 400 - 600 kilogram ɖeka",
+        cassavaPriceRange: "CFA 150 - 200 kilogram ɖeka",
+        groundnutPriceRange: "CFA 500 - 800 kilogram ɖeka",
+
+        diseaseTitle: "🦠 Dɔléle kpɔkpɔ",
+        diseaseSubtitle: "Da atilɔ ƒe foto ɖe eme be nàkpɔ dɔléle",
+        uploadImage: "📁 Da foto ɖe eme",
+        analyzeBtn: "Dzro eme kɔ 🌱",
+        fileText: "Fikpaɖeke meli o",
+        backHome: "⬅ Trɔ yi aƒeme",
+
+        aboutTitle: "ℹ️ AgriSmart ŋuti",
+        aboutSubtitle: "Agbledɔwɔwɔ ƒe platform nunyala na agbledelawo le Togo",
+
+        overviewTitle: "🌾 Numeɖeɖe",
+        overviewText1: "AgriSmart nye agbledɔwɔwɔ ƒe platform nunyala si wowɔ be wòakpe ɖe agbledelawo ŋu le Togo to nunya vevie siwo hiã na nyametsotso wɔwɔ dzi.",
+        overviewText2: "Etsɔ yaƒoƒo ŋkuɖoɖo, nukuwo dzikpɔkpɔ mɔfiafia, ga home dzikpɔkpɔ kple dɔléle kpɔkpɔ wɔ ɖeka ɖe mɔ̃ ɖeka me.",
+
+        backgroundTitle: "🌍 Gɔmedzedze kple kuxiwo",
+        backgroundText1: "Agbledɔwɔwɔ nye dɔwɔna vevi le Togo, gake agbledelawo dowɔ kuxi geɖe abe nunya masusɔ, yaƒoƒo ƒe nyanya menɔ anyi o, nukuwo ƒe dɔléle, kple ga home siwo tɔtɔna ene.",
+        backgroundText2: "Kuxi siawo hea dɔwɔwɔ ƒe nyuinyenye kple ganyanya masusɔ vaa.",
+
+        solutionTitle: "💡 Kuxidodo si wode",
+        solutionText: "AgriSmart naa agbledɔwɔwɔ ŋuti nyanya le ɣeyiɣi ma me le platform bɔbɔe kple ame sia ame ate ŋu azã.",
+
+        featuresTitle: "⚙️ Dɔwɔnu vevitɔwo",
+        feature1: "🌦️ Yaƒoƒo ŋkuɖoɖo kple agble aɖaŋuɖoɖo",
+        feature2: "🌱 Nukuwo ƒe mɔfiafia kple ale si woadowo",
+        feature3: "💰 Ga home dzikpɔɖoɖo ƒe mɔ̃",
+        feature4: "🦠 Dɔléle kpɔkpɔ to foto dzrodzro me",
+
+        impactTitle: "🚀 Vidzedze si wolala kpɔ",
+        impact1: "Nukuwo tsɔtsɔ dzi ɖe edzi",
+        impact2: "Agbledɔwɔwɔ ƒe afɔku dzadzɛ",
+        impact3: "Dɔléle dzikpɔɖoɖo nyuie wu tsã",
+        impact4: "Agbledelawo ƒe ganyanya nyuie wu tsã",
+
+        futureTitle: "🌍 Etsɔsi dzɔdzɔ",
+        future1: "Dɔléle kpɔkpɔ to susunɔ ŋusẽ dzi",
+        future2: "Yaƒoƒo API le ɣeyiɣi ma me",
+        future3: "Dɔwɔwɔ le internet manɔmee",
+        future4: "Kpekpeɖeŋu na gbe siwo wodona le nutome",
+
+        conclusionTitle: "🙏 Nuwuwu",
+        conclusionText: "AgriSmart trɔ agbledɔwɔwɔ le Togo yeye to mɔ̃nuwɔnawo kple agbledɔwɔwɔ ƒe hiahiãwo dodo ɖekae be woadzi nukuwo tsɔtsɔ kple agbenɔnɔ nyuie wu tsã.",
+
+        contactPageTitle: "Ka ɖe AgriSmart ŋu 📩",
+        contactPageSubtitle: "Míele afisia be míakpe ɖe agbledelawo ŋu le Togo kple teƒe bubuwo hã",
+
+        nameLabel: "Ŋkɔ blibo",
+        namePlaceholder: "Wò ŋkɔ",
+
+        emailLabel: "Email",
+        emailPlaceholder: "Wò email",
+
+        subjectLabel: "Nyati",
+        subjectPlaceholder: "Nyati",
+
+        messageLabel: "Gbedeasi",
+        messagePlaceholder: "Ŋlɔ wò gbedeasi...",
+
+        sendBtn: "Ɖo gbedeasi",
+
+        ourInfoTitle: "📍 Míaƒe nyanyawo",
+        emailInfo: "📧 Email: support@agrismart.com",
+        phoneInfo: "📞 Kaƒoƒo: +228 79 56 07 98",
+        locationInfo: "📍 Nɔƒe: Lomé, Togo",
+
+        followUsTitle: "🌍 Dze mía yome",
+        socialLinks: "Facebook | WhatsApp | Instagram",
+
+        footerLocation: "📍 Lomé, Togo",
+        footerEmail: "📧 support@agrismart.com",
+        footerPhone: "📞 +228 79 56 07 98",
+
+        calcTitle: "🌾 Agble xexlẽmɔ̃",
+        calcSubtitle: "Xlẽ wò nukuwo tsɔtsɔ xexlẽme bɔbɔe",
+        areaLabel: "Anyigba ƒe gaƒoƒo (hectare)",
+        yieldLabel: "Tsɔtsɔ le hectare ɖeka dzi (ton)",
+        calcBtn: "Xlẽ eme kɔ",
+        resultTitle: "Emetsonu:",
+        calcOutputError: "Meɖe kuku, xlẽ nu siwo sɔ",
+        calcOutputText: "ton siwo woalala be woatsɔ",
+
+        forumTitle: "🌾 Agbledelawo ƒe Habɔbɔ",
+        forumSubtitle: "Ma aɖaŋuɖoɖowo, bia biabiawo, eye nàkpe ɖe agbledela bubuwo ŋu",
+        createPostTitle: "📝 Ŋlɔ nya aɖe",
+        postBtn: "Ɖo",
+        yourName: "Wò ŋkɔ",
+        writeMessage: "Ŋlɔ wò gbedeasi...",
+
+        postUser1: "Amis Farmer",
+        postText1: "Nuku kae nyo wu na tsidzadza ɣeyiɣi le Togo?",
+        postUser2: "AgriExpert",
+        postText2: "Bli kple agbeli tsɔna nyuie ɖe ɣeyiɣi sia me.",
+
+        // AXƆDZI / ŊKƆƐŊLƆƐ FE AƑE
+        authSubtitleLogin: "Ge ɖe eme be nàkpɔ wò agbledela ƒe nɔƒe",
+        authSubtitleRegister: "Wɔ wò AgriSmart akɔnta le sekend ʋɛ aɖewo me",
+        tabLoginText: "Ge ɖe eme",
+        tabRegisterText: "Wɔ akɔnta",
+        loginEmailLabel: "Email address",
+        loginPasswordLabel: "Password",
+        loginSubmitBtn: "Ge ɖe eme",
+        firstNameLabel: "Ŋkɔ gbãtɔ",
+        lastNameLabel: "Ŋkɔ",
+        registerEmailLabel: "Email address",
+        phoneLabel: "Kaƒoƒo xexlẽdzesi",
+        birthDateLabel: "Dzigbe ŋkeke",
+        registerPasswordLabel: "Password",
+        ruleLengthText: "Nɔmɔ 8 tsɔtsɔɖe kɔmɛ",
+        ruleUpperText: "Gbeɖeɖe gã 1",
+        ruleLowerText: "Gbeɖeɖe sue 1",
+        ruleNumberText: "Xexlẽdzesi 1",
+        ruleSpecialText: "Nɔmɔ tɔxɛ 1",
+        confirmPasswordLabel: "Gaɖo kpe password dzi",
+        termsLabelPrefix: "Melɔ̃ ɖe",
+        termsLink: "zãzãɖoɖowo",
+        termsLinkMid: "kple",
+        privacyLink: "nutrɔgbenya ɖoɖo",
+        termsLabelSuffix: "AgriSmart tɔ dzi.",
+        registerSubmitBtn: "Wɔ nye akɔnta",
+        authDivider: "ALƆ",
+        googleBtnText: "Yi edzi kple Google",
+        authFooterNote: "Ne ège ɖe eme la, èlɔ̃ ɖe míaƒe zãzãɖoɖowo dzi."
     }
 };
 
@@ -364,36 +623,58 @@ const text = {
 // APPLY LANGUAGE
 // =========================
 
+const LANG_META = {
+    en: { code: "EN", flagId: "langFlagIconGB", label: "English" },
+    fr: { code: "FR", flagId: "langFlagIconFR", label: "Français" },
+    ewe: { code: "EW", flagId: "langFlagIconTG", label: "Éwé" }
+};
+
 function setLanguage(l) {
+    if (!LANG_META[l]) l = "en";
     lang = l;
     localStorage.setItem("lang", lang);
-    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("lang", lang === "ewe" ? "ee" : lang);
 
-    const flagGB = document.getElementById("langFlagIconGB");
-    const flagFR = document.getElementById("langFlagIconFR");
     const flagCode = document.getElementById("langFlagCode");
     const toggleBtn = document.getElementById("langToggleBtn");
-    if (flagGB && flagFR && flagCode) {
-        // Affiche le drapeau de la langue VERS LAQUELLE on peut basculer
-        if (lang === "fr") {
-            flagGB.style.display = "inline-flex";
-            flagFR.style.display = "none";
-            flagCode.textContent = "EN";
-            if (toggleBtn) toggleBtn.setAttribute("aria-label", "Switch to English");
-        } else {
-            flagGB.style.display = "none";
-            flagFR.style.display = "inline-flex";
-            flagCode.textContent = "FR";
-            if (toggleBtn) toggleBtn.setAttribute("aria-label", "Passer en français");
-        }
-    }
 
+    Object.values(LANG_META).forEach(m => {
+        const el = document.getElementById(m.flagId);
+        if (el) el.style.display = "none";
+    });
+    const activeFlag = document.getElementById(LANG_META[lang].flagId);
+    if (activeFlag) activeFlag.style.display = "inline-flex";
+    if (flagCode) flagCode.textContent = LANG_META[lang].code;
+    if (toggleBtn) toggleBtn.setAttribute("aria-label", "Current language: " + LANG_META[lang].label);
+
+    document.querySelectorAll(".lang-option").forEach(opt => opt.classList.remove("active"));
+    const activeOptionId = { en: "langOptionEN", fr: "langOptionFR", ewe: "langOptionEWE" }[lang];
+    const activeOption = document.getElementById(activeOptionId);
+    if (activeOption) activeOption.classList.add("active");
+
+    closeLangMenu();
     updateText();
 }
 
-function toggleLanguage() {
-    setLanguage(lang === "en" ? "fr" : "en");
+function toggleLangMenu() {
+    const menu = document.getElementById("langMenu");
+    const toggleBtn = document.getElementById("langToggleBtn");
+    if (!menu) return;
+    const isOpen = menu.classList.toggle("open");
+    if (toggleBtn) toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
 }
+
+function closeLangMenu() {
+    const menu = document.getElementById("langMenu");
+    const toggleBtn = document.getElementById("langToggleBtn");
+    if (menu) menu.classList.remove("open");
+    if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
+}
+
+document.addEventListener("click", (e) => {
+    const switcher = document.querySelector(".lang-switcher-modern");
+    if (switcher && !switcher.contains(e.target)) closeLangMenu();
+});
 
 function updateText() {
     const t = text[lang];
@@ -608,6 +889,45 @@ function updateText() {
     set("postText2", t.postText2);
 
     set("postBtn", t.postBtn);
+
+    // LOGIN / REGISTER PAGE
+    const currentAuthMode = (typeof mode !== "undefined") ? mode : "login";
+    set("authSubtitle", currentAuthMode === "register" ? t.authSubtitleRegister : t.authSubtitleLogin);
+    set("tabLoginText", t.tabLoginText);
+    set("tabRegisterText", t.tabRegisterText);
+    set("loginEmailLabel", t.loginEmailLabel);
+    set("loginPasswordLabel", t.loginPasswordLabel);
+    set("loginSubmitBtn", t.loginSubmitBtn);
+    set("firstNameLabel", t.firstNameLabel);
+    set("lastNameLabel", t.lastNameLabel);
+    set("registerEmailLabel", t.registerEmailLabel);
+    set("phoneLabel", t.phoneLabel);
+    set("birthDateLabel", t.birthDateLabel);
+    set("registerPasswordLabel", t.registerPasswordLabel);
+    set("ruleLengthText", t.ruleLengthText);
+    set("ruleUpperText", t.ruleUpperText);
+    set("ruleLowerText", t.ruleLowerText);
+    set("ruleNumberText", t.ruleNumberText);
+    set("ruleSpecialText", t.ruleSpecialText);
+    set("confirmPasswordLabel", t.confirmPasswordLabel);
+    set("termsLink", t.termsLink);
+    set("privacyLink", t.privacyLink);
+    set("registerSubmitBtn", t.registerSubmitBtn);
+    set("authDivider", t.authDivider);
+    set("googleBtnText", t.googleBtnText);
+    set("authFooterNote", t.authFooterNote);
+
+    const termsLabelEl = document.getElementById("termsLabel");
+    if (termsLabelEl && t.termsLabelPrefix) {
+        const termsLinkEl = document.getElementById("termsLink");
+        const privacyLinkEl = document.getElementById("privacyLink");
+        termsLabelEl.innerHTML = "";
+        termsLabelEl.appendChild(document.createTextNode(t.termsLabelPrefix + " "));
+        if (termsLinkEl) termsLabelEl.appendChild(termsLinkEl);
+        termsLabelEl.appendChild(document.createTextNode(" " + t.termsLinkMid + " "));
+        if (privacyLinkEl) termsLabelEl.appendChild(privacyLinkEl);
+        termsLabelEl.appendChild(document.createTextNode(" " + t.termsLabelSuffix));
+    }
 }
 
 // =========================
@@ -630,6 +950,12 @@ const adviceText = {
         adviceDay1: "Journée ensoleillée : idéale pour semer et sécher la récolte.",
         adviceDay2: "Journée pluvieuse : évitez de pulvériser des pesticides aujourd'hui.",
         adviceDay3: "Journée nuageuse : idéale pour repiquer les jeunes plants."
+    },
+
+    ewe: {
+        adviceDay1: "Ɣenuɣi ŋkeke: enyo na nuku ƒoƒo kple nukuha ƒuƒu.",
+        adviceDay2: "Tsidzadza ŋkeke: mègahlẽ atikewuame ɖe nukuwo dzi egbe o.",
+        adviceDay3: "Lilikpo ŋkeke: enyo na atilɔ mumuwo ɖodzi."
     }
 };
 
@@ -729,13 +1055,12 @@ async function analyzeImage() {
     if (!resultEl) return;
 
     if (!input || !input.files || !input.files[0]) {
-        resultEl.innerText = lang === "fr"
-            ? "Veuillez d'abord choisir une image."
-            : "Please choose an image first.";
+        resultEl.innerText = { fr: "Veuillez d'abord choisir une image.", ewe: "Tia foto aɖe gbã." }[lang]
+            || "Please choose an image first.";
         return;
     }
 
-    resultEl.innerText = lang === "fr" ? "Analyse en cours..." : "Analyzing...";
+    resultEl.innerText = { fr: "Analyse en cours...", ewe: "Wole eme dzrom kɔ..." }[lang] || "Analyzing...";
 
     const formData = new FormData();
     formData.append("file", input.files[0]);
@@ -753,14 +1078,19 @@ async function analyzeImage() {
         const diseaseName = lang === "fr" ? (data.disease_fr || data.disease) : data.disease;
         const confidencePct = Math.round((data.confidence || 0) * 100);
 
-        resultEl.innerText = lang === "fr"
-            ? `Résultat : ${diseaseName} — confiance ${confidencePct}%`
-            : `Result: ${diseaseName} — ${confidencePct}% confidence`;
+        if (lang === "fr") {
+            resultEl.innerText = `Résultat : ${diseaseName} — confiance ${confidencePct}%`;
+        } else if (lang === "ewe") {
+            resultEl.innerText = `Emetsonu: ${diseaseName} — kakaɖedzi ${confidencePct}%`;
+        } else {
+            resultEl.innerText = `Result: ${diseaseName} — ${confidencePct}% confidence`;
+        }
     } catch (err) {
         // Backend unreachable: explain instead of faking a result.
-        resultEl.innerText = lang === "fr"
-            ? "Impossible de contacter le serveur d'analyse. Démarrez backend/app.py (voir README) pour activer la détection."
-            : "Couldn't reach the analysis server. Start backend/app.py (see README) to enable detection.";
+        resultEl.innerText = {
+            fr: "Impossible de contacter le serveur d'analyse. Démarrez backend/app.py (voir README) pour activer la détection.",
+            ewe: "Mele ŋutete me be woaka asi dzrodzro server la ŋu o. Dze backend/app.py gɔme (kpɔ README) be nàʋu dɔléle kpɔkpɔ."
+        }[lang] || "Couldn't reach the analysis server. Start backend/app.py (see README) to enable detection.";
     }
 }
 
@@ -837,7 +1167,7 @@ async function addPost() {
     const message = messageInput.value.trim();
 
     if (!name || !message) {
-        alert(lang === "fr" ? "Veuillez remplir tous les champs" : "Please fill all fields");
+        alert({ fr: "Veuillez remplir tous les champs", ewe: "Meɖe kuku, yɔ akpa siwo katã ɖe eme" }[lang] || "Please fill all fields");
         return;
     }
 
