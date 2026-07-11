@@ -1,11 +1,3 @@
-
-"""
-Date : 08/07/2026
-Auteur : Elpidio Alexis AMOUSSOU
-Email : amoussouelpidioalexis@gmail.com
-
-"""
-
 # 🌾 AgriSmart
 
 **Plateforme numérique intelligente pour l'agriculture au Togo**
